@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="12.html">next</a>|<a href="10.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>11. Environment modifiers<br/><br/></p>
+<p>``principal'' is defined in <a href="https://github.com/shindere/ocaml/tree/ocamltest/ocamltest/builtin_modifiers.ml">ocamltest/builtin_modifiers.ml</a> as follows:</p>
+<pre>
+let principal = [
+  Append (flags, " -principal ");
+  Add (compiler_directory_suffix, ".principal");
+  Add (compiler_reference_suffix, ".principal"); ]
+</pre>
+<p>Two other modifiers (defined in the same file) are available:</p>
+<ul>
+  <li>expect: gives the right value to the script variable. The expect test is then built by (1) applying the expect modifier to the current environment and (2) running the script test.
+  <li>testing: links with the testing library</li>
+</ul>
+</body>
+</html>

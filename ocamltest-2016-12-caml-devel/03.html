@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="04.html">next</a>|<a href="02.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>3. Current state of the compiler's test infrastructure<br/><br/></p>
+<p></p>
+<ul>
+  <li>Tests are run and driven by a set of makefiles
+  <ul>
+    <li>Modifiying or extending them is hard and erro-prone</li>
+    <li>Writing tests is hard</li>
+    <li>Developers are not encouraged to do it</li>
+  </ul></li>
+  <li>No clear distinction between test metadata and the code to run them</li>
+  <li>Not much information (easily) available e.g. for failing tests:
+  <ul>
+    <li>No log of executed commands</li>
+    <li>Binary programs (program.byte / program.opt) lost</li>
+    <li>Test results are in a non-standard format -- they can not be easily integrated e.g. in a continuous integration system</li>
+    <li>Test reports have thus to be done with a dedicated tool (written in awk)</li>
+  </ul></li>
+</ul>
+</body>
+</html>

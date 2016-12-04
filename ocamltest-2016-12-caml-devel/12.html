@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="13.html">next</a>|<a href="11.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>12. Nested tests<br/><br/></p>
+<p>Certain tests need to be compiled once but executed several times, each time with different command-line options.</p>
+<p>Although no concrete example has been migrated so far, ocamltest supports the following construct (inspired by <a href="http://www.orgmode.org">org-mode</a>'s syntax) to compile a program once and then run it three times successively with arguments a, b and c:</p>
+<pre>
+(* TEST
+  * compile-bytecode-with-bytecode-compiler  
+  ** execute
+     arguments = "a"
+  ** execute
+     arguments = "b"
+  ** execute
+     arguments = "c"
+*)
+</pre>
+<p>(It may be necessary to specify more variables if, e.g., the reference output changes from one execution to another.)</p>
+</body>
+</html>

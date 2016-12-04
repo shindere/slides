@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="09.html">next</a>|<a href="07.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>8. Example 2<br/><br/></p>
+<p>See <a href="https://github.com/shindere/ocaml/tree/ocamltest/testsuite/tests/typing-extension-constructor/test.ml">testsuite/typing-extension-constructor/test.ml</a>, a toplevel test whose test description looks like this:</p>
+<pre>
+(* TEST
+  * toplevel
+*)
+</pre>
+The ``toplevel'' test is defined in <a href="https://github.com/shindere/ocaml/tree/ocamltest/ocamltest/builtin_tests.ml">ocamltest/builtin_tests.ml</a> as follows:
+<pre>
+let toplevel = {
+  test_name = "toplevel";
+  test_run_by_default = false;
+  test_actions = [
+    run_in_ocaml; check_ocaml_output;
+    (* run_in_ocamlnat; check_ocamlnat_output; *) ] }
+</pre>
+</body>
+</html>

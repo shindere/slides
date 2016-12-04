@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="16.html">next</a>|<a href="14.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>15. How to migrate tests<br/><br/></p>
+<p>Migration should be done on a per-directory basis.</p>
+<p>Given a subdirectory of testsuite/tests containing legacy tests (i.e. a Makefile):</p>
+<ul>
+  <li>Determine which are the main test files (read the Makefile, the files it includes, the files in the directory)</li>
+  <li>Annotate each main test file with an ocamltest specification block (this may require enhancing ocamltest itself)</li>
+  <li>Run the test file under ocamltest until all tests pass (this may imply modifying and/or renaming the reference files)</li>
+  <li>Once all files have been successfully migrated, remove the Makefile and create an ocamltests file containing their names</li>
+  <li>The names of the migrated test files should appear in the output of ``make new'' when run in the testsuite directory</li>
+</ul>
+</body>
+</html>

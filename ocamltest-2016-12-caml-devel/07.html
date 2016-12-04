@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="08.html">next</a>|<a href="06.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>7. Available builtin variables<br/><br/></p>
+<p>At the moment, they can contain only strings.</p>
+<p>Other examples of variables that can be used in tests:</p>
+<ul>
+  <li>flags: options for both native and byte-code compilers</li>
+  <li>bcflags (resp. ncflags): options specific to the byte-code (resp. native) compiler</li>
+  <li>modules: name of other modules in the test (ocamltest knows how to deal with .ml, .mli and .c files and will ultimately know how to deal with .mll, .mly and .cmm files, at least)</li>
+  <li>files: other files to symlink/copy to build directory</li>
+  <li>libraries: which libraries to use at link time</li>
+  <li>PROGRAM_exit_status: expected exit status of PROGRAM, when non-zero</li>
+  <li>script: external script to run to perform the test</li>
+</ul>
+<p>For a complete list, see <a href="https://github.com/shindere/ocaml/tree/ocamltest/ocamltest/builtin_variables.mli">ocamltest/builtin_variables.mli</a>.</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="15.html">next</a>|<a href="13.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>14. Integration to the testsuite<br/><br/></p>
+<p>ocamltest's output is similar to the current test output and can thus be parsed by the awk report script.</p>
+<p>In the testsuite directory:</p>
+<ul>
+  <li>make legacy runs legacy tests (those in subdirectories of tests/ that contain a Makefile)</li>
+  <li>make new runs ocamltest-based tests (looks for directories containing an ocamltests file which in turn contains the names of the tests to run)</li>
+  <li>make all runs both legacy and ocamltest-based tests</li>
+</ul>
+<p>So far, about 140 out of 610 tests have been migrated and pass under both Linux and Windows.</p>
+<p>Beware: tests are counted differently by the legacy and ocamltest frameworks (ocamlc and ocamlopt count as one in the legacy framework but as two for ocamltest), so migrating one test may change the total number of tests and the number of passing tests.
+</body>
+</html>

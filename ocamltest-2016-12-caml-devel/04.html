@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="05.html">next</a>|<a href="03.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>4. Constraints<br/><br/></p>
+<p></p>
+<ul>
+  <li>Restrain dependencies to the most portable part of the compiler (tests should work as quickly as possible even when OCaml is ported to a new platform)</li>
+  <li>In particular, use neither Unix nor Str</li>
+  <li>No dependency on OCaml tools not distributed with the compiler</li>
+</ul>
+<p></p>
+<p>Design principle: the more common the test is, the simpler it should be to write it</p>
+<p>One common test: compile, run, check exit code is 0 and program output is empty.</p>
+
+</body>
+</html>

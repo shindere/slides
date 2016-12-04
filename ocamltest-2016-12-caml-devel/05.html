@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head><title>ocamltest</title></head>
+<body>
+
+<p><a href="06.html">next</a>|<a href="04.html">prev</a>|<a href="index.html">index</a></p>
+
+<p>5. Overview of ocamltest<br/><br/></p>
+<p>See the <a href="https://github.com/shindere/ocaml/tree/ocamltest/ocamltest">code</a> and the <a href="https://github.com/ocaml/ocaml/pull/681">PR #681</a>.</p>
+<p>ocamltest is a test driver</p>
+<p>It reads test descriptions written in a DSL and runs the tests</p>
+<p>Test descriptions appear at the beginning of the test program in a<br/>(* TEST [...] *)<br/>comment</p>
+<p>(CLang tests use the same idea)</p>
+<p>Each test is run in its own build directory, to which the necessary files are symlinked or copied, thus:</p>
+<ul>
+  <li>The source tree remains untouched</li>
+  <li>It is easy to see exactly which files have been produced by each test</li>
+</ul>
+</body>
+</html>
