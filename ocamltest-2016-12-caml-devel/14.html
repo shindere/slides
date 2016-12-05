@@ -11,9 +11,9 @@
 <p>ocamltest's output is similar to the current test output and can thus be parsed by the awk report script.</p>
 <p>In the testsuite directory:</p>
 <ul>
-  <li>make legacy runs legacy tests (those in subdirectories of tests/ that contain a Makefile)</li>
-  <li>make new runs ocamltest-based tests (looks for directories containing an ocamltests file which in turn contains the names of the tests to run)</li>
-  <li>make all runs both legacy and ocamltest-based tests</li>
+  <li>``make legacy'' runs legacy tests (those in subdirectories of tests/ that contain a Makefile)</li>
+  <li>``make new'' runs ocamltest-based tests (looks for directories containing an ocamltests file which in turn contains the names of files describing tests)</li>
+  <li>``make all'' runs both legacy and ocamltest-based tests</li>
 </ul>
 <p>So far, about 140 out of 610 tests have been migrated and pass under both Linux and Windows.</p>
 <p>Beware: tests are counted differently by the legacy and ocamltest frameworks (ocamlc and ocamlopt count as one in the legacy framework but as two for ocamltest), so migrating one test may change the total number of tests and the number of passing tests.
