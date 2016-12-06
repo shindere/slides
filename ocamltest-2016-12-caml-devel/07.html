@@ -16,7 +16,7 @@
   <li>modules: name of other modules in the test (ocamltest knows how to deal with .ml, .mli and .c files and will ultimately know how to deal with .mll, .mly and .cmm files, at least)</li>
   <li>files: other files to symlink/copy to build directory</li>
   <li>libraries: which libraries to use at link time</li>
-  <li>PROGRAM_exit_status: expected exit status of PROGRAM, when non-zero</li>
+  <li>${COMPILER}_exit_status: expected exit status of ${COMPILER}, when non-zero (useful for tests that are expected to fail)</li>
   <li>script: external script to run to perform the test</li>
 </ul>
 <p>For a complete list, see <a href="https://github.com/shindere/ocaml/tree/ocamltest/ocamltest/builtin_variables.mli">ocamltest/builtin_variables.mli</a>.</p>
