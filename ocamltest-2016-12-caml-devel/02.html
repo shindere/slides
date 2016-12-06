@@ -8,17 +8,14 @@
 <p><a href="03.html">next</a>|<a href="01.html">prev</a>|<a href="index.html">index</a></p>
 
 <p>2. Cross-compilation<br/><br/></p>
-<p>Purpose:</p>
-<ul>
-  <li>Either being able to configure/compile on platform of architecture A (host) an OCaml compiler that produces native code for an architecture B!=A (target architecture)</li>
-  <li>Or make the OCaml compiler able to produce native code for several architectures at the same time</li>
-</ul>
+<p>Purpose: being able to run ocaml on one host platform and produce native code for a different target platform. </p>
+<p>This should work even when the size of words differs between the host and the target platform.</p>
 <p>Steps:</p>
 <ul>
   <li>Unifying Unix and Windows build systems (Work In Progress)</li>
   <li>Replacing the hand-written configure script by an autoconf script that works for all the platforms and has support for the concepts of host and target architectures</li>
   <li>(optional) Improving the build system itself: including sub-makefiles rather than calling make recursively, to let ``make'' see all the dependencies and thus make parallel builds more efficient</li>
-  <li>Improve distinction between code for the host system and code for the target system in the compiler itself</li>
+  <li>Improve distinction between code for the host system and code for the target system in the compiler itself (32-bits host and 64-bits target seems the most difficult combination)</li>
 </ul>
 </body>
 </html>
