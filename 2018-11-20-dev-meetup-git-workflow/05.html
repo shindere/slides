@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>How I do</title>
+</head>
+<body>
+
+<p><a href="06.html">next</a>|<a href="04.html">prev</a></p>
+<p>5. How I do<br/><br/></p>
+<p><ul>
+  <li>Create a branch with a descriptive name, rather than stashing</li>
+  <li>Create a draft for the pull request message</li>
+  <li>Create an initial commit that describes the intended feature</li>
+  <li>Amend that commit incrementally: git commit --amend --date=now</li>
+  <li>Also update commit and PR messages</li>
+</ul></p>
+
+<p>Consequences:
+<ul>
+  <li>git status always reports a clean working copy</li>
+  <li>It's possible to switch to something else at any time</li>
+  <li>If something else needs to be changed, it becomes easy to:
+  <ul>
+    <li>Record it in a distinct commit</li>
+    <li>Reorder commits to bring the main one to the branch tip:<br/>
+    git rebase -i</li>
+  </ul></li>
+</ul></p>
+<p>Benefits:
+<ul>
+  <li>The history remains accurate</li>
+  <li>The mind remains free</li>
+</ul></p>
+</body>
+</html>
